@@ -1,0 +1,60 @@
+import React from 'react';
+import Header from './components/Header';
+import NavBar from './components/NavBar';
+import MainContent from './components/MainContent';
+
+const cssUrls = [
+  "https://student.uit.edu.vn/modules/system/system.base.css?sl66pa",
+  "https://student.uit.edu.vn/modules/system/system.menus.css?sl66pa",
+  "https://student.uit.edu.vn/modules/system/system.messages.css?sl66pa",
+  "https://student.uit.edu.vn/modules/system/system.theme.css?sl66pa",
+  "https://student.uit.edu.vn/modules/aggregator/aggregator.css?sl66pa",
+  "https://student.uit.edu.vn/sites/all/modules/contrib/ckeditor_accordion/css/ckeditor-accordion.css?sl66pa",
+  "https://student.uit.edu.vn/modules/comment/comment.css?sl66pa",
+  "https://student.uit.edu.vn/modules/field/theme/field.css?sl66pa",
+  "https://student.uit.edu.vn/sites/all/modules/custom/li_lich/css/lilich.css?sl66pa",
+  "https://student.uit.edu.vn/sites/all/modules/custom/lookup/css/lookup.css?sl66pa",
+  "https://student.uit.edu.vn/modules/node/node.css?sl66pa",
+  "https://student.uit.edu.vn/modules/search/search.css?sl66pa",
+  "https://student.uit.edu.vn/sites/all/modules/uit_common/css/uit_common.css?sl66pa",
+  "https://student.uit.edu.vn/sites/daa/modules/custom/uit_dichvu/css/dichvu.css?sl66pa",
+  "https://student.uit.edu.vn/sites/all/modules/custom/uit_dkphong/css/main.css?sl66pa",
+  "https://student.uit.edu.vn/sites/all/modules/custom/uit_sinhvien/css/diemthi.css?sl66pa",
+  "https://student.uit.edu.vn/modules/user/user.css?sl66pa",
+  "https://student.uit.edu.vn/sites/all/modules/contrib/views/css/views.css?sl66pa",
+  "https://student.uit.edu.vn/sites/all/modules/contrib/back_to_top/css/back_to_top.css?sl66pa",
+  "https://student.uit.edu.vn/sites/all/modules/contrib/ckeditor/css/ckeditor.css?sl66pa",
+  "https://student.uit.edu.vn/sites/all/modules/contrib/ctools/css/ctools.css?sl66pa",
+  "https://student.uit.edu.vn/sites/all/libraries/select2/dist/css/select2.min.css?sl66pa",
+  "https://student.uit.edu.vn/sites/all/themes/open_framework/packages/bootstrap-2.3.1/css/bootstrap.min.css?sl66pa",
+  "https://student.uit.edu.vn/sites/all/themes/open_framework/packages/bootstrap-2.3.1/css/bootstrap-responsive.min.css?sl66pa",
+  "https://student.uit.edu.vn/sites/all/themes/open_framework/packages/font-awesome-4.7.0/css/font-awesome.min.css?sl66pa",
+  "https://student.uit.edu.vn/sites/all/themes/open_framework/css/open_framework.css?sl66pa",
+  "https://student.uit.edu.vn/sites/all/themes/uitpb_daa/css/style.css?sl66pa",
+  "https://student.uit.edu.vn/sites/all/themes/open_framework/css/open_framework_print.css?sl66pa"
+];
+
+function loadCssFromUrls() {
+  cssUrls.forEach(url => {
+    const link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = url;
+    document.head.appendChild(link);
+  });
+}
+
+function App() {
+  React.useEffect(() => {
+    loadCssFromUrls();
+  }, []);
+
+  return (
+    <div className="App">
+      <Header />
+      <NavBar />
+      <MainContent />
+    </div>
+  );
+}
+
+export default App;
