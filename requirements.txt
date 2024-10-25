@@ -1,0 +1,8 @@
+flask==3.0.3
+flask-cors==3.0.10
+haystack-ai==2.6.1
+elasticsearch==8.15.1
+sentence-transformers==3.2.1
+transformers==4.45.1
+python-dotenv==1.0.1
+gunicorn
